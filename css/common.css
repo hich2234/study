@@ -1,0 +1,25 @@
+html, body{
+    margin: 0;
+}
+
+ul, li{
+    list-style-type: none;
+}
+a{
+    color: #95979d;
+    text-decoration: none;
+}
+span, em, strong, a{
+    display: inline-block;
+}
+*{
+    margin: 0; padding: 0;
+    font-size: 16px;
+    font-family: '';
+    color: #95979d;
+    box-sizing: border-box;
+    /*
+    width, height에 border또는 padding을 넣었을 때 변경되는 사이즈 값을 자동해결
+    변경되는 값이 기존 사이즈 안에서 해결됨
+    */
+}

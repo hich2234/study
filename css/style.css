@@ -1,0 +1,425 @@
+@import url('common.css');
+
+
+.wrap{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 20; 
+}
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 40px 25px 70px 50px;
+}
+header nav > a{}
+header nav ul{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li{
+    padding: 0 40px;
+    position: relative;
+}
+header nav ul li > a{
+    padding: 0 10px;
+    color: #ccc;
+    font-size: 1.1em;
+    position: relative;
+    transition: .3s;
+}
+header nav ul li > a:after{
+    content: '';
+    width: 0%; height: 3px;
+    background: #00f;
+    position: absolute; left: 50%; top: -4px;
+    transition: .5s ease-out;
+}
+header nav ul li > a:hover{color: #000;}
+header nav ul li > a:hover:after{
+    width: calc(100% - 15px);
+    left: 8px;
+}
+
+
+
+/* SUB MENU */
+header nav ul li div{
+    width: 100px; height: 0px;
+    position: absolute; left: calc(50% - 50px); top: 30px;
+    background: rgba(255,255,255,0.6);
+    transition: .4s;
+    overflow: hidden;
+}
+header nav ul li:nth-of-type(3) div{
+    height: 0px;
+}
+header nav ul li:hover div{
+    height: 100px;
+}
+header nav ul li:nth-of-type(3):hover div{
+    height: 130px;
+}
+header nav ul li div a:nth-of-type(1){margin-top: 15px;}
+header nav ul li div a{
+    color: #3456a1;
+    padding: 6px 0;
+    transition: .3s;
+}
+header nav ul li div a:hover{
+    color: #fff;
+}
+
+
+/* 예약하기 */
+header nav > div{
+    border-radius: 30px;
+    background: #eaae02;
+    transition: .3s;
+}
+header nav > div a{
+    padding: 8px 20px 0 20px;
+    color: #fff;
+    /*background: #eaae02;*/
+}
+header nav > div:hover{
+    border-radius: 0px;
+    border: 1px solid #eaae02;
+    background: none;
+}
+header nav > div:hover a{
+    margin-bottom: 3px;
+}
+
+
+/* ARTICLE */
+article{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+article.num{}
+
+article .visual{
+    width: 90%;
+    margin: 0 auto;
+    /*display: flex;
+    justify-content: space-between;*/
+    position: absolute; left: 5%; top: 45%;
+    z-index: 10;
+}
+article .visual a{
+    
+    width: 30px; height: 50px;
+    background: rgba(0,0,0,1);
+}
+
+article .visual a:hover:before{
+    opacity: .9;
+}
+article .visual a img{
+    opacity: .6;
+    transition: .2s;
+}
+article .visual a:hover img{
+    opacity: .9;
+}
+article .visual a:first-child:before{left: -4px;}
+article .visual a:last-child:before{left: -5px;}
+article .visual a:first-child{float: left;}
+article .visual a:last-child{float: right;}
+article .visual a > img{}
+
+
+/*비주얼 텍스트*/
+article .text{
+    width: 100%; height: 100%;
+    white-space: pre-line;
+    line-height: 2em;
+    position: absolute; left:0; top:0%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+article .text h1{
+    color: #fff;
+    font-size: 5.25em;
+    font-weight: 400;
+    font-family: 'AmeriGarmnd BT';
+}
+article .text span{
+    color: #fff;
+    font-size: .75em;
+    font-weight: 400;
+    font-family: 'AmeriGarmnd BT';
+    padding: 20px 0 10px 0;
+}
+article .text h2{
+    color: #fff;
+    font-size: 2.25em;
+    font-weight: 400;
+    font-family: 'Adobe 명조 Std';
+}
+article .text p{
+    color: #fff;
+    font-size: .5em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+
+/* 동글뱅이 */
+article .circleBox{
+    width: 70px;
+    position: absolute;
+    left: calc(50% - 35px); bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    z-index: 10;
+}
+article .circleBox a{
+    width: 8px; height: 8px;
+    background: rgba(255,255,255,.7);
+    border-radius: 30px;
+    position: relative;
+    transition: .5s;
+}
+article .circleBox a:after{
+    content: '';
+    width: 110%; height: 110%;
+    border-radius: 30px;
+    margin: 0 4px;
+    position: absolute; left: -5px; top: -2px;
+    background: #06214e;
+    border: 1px solid #fff;
+    transition: .3s;
+    display: none;
+}
+article .circleBox a:hover{}
+article .circleBox a:hover:after{display: block;}
+
+
+/*배경이미지*/
+article > p{
+    width: 1920px;
+    position: fixed; left: 0; top: 0;
+    z-index: -1;
+}
+article > p img{
+    width: 100%;
+}
+article > p:after{
+    content: '';
+    width: 100%; height: 200%;
+    position: absolute; left: 0; top: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+
+/* SECTION01 */
+.section_01{
+    width: 100%;
+    background: #fff;
+    padding: 244px 0 127px 0;
+}
+
+.section_01 .content{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: top;
+    width: 1440px;
+    margin: 0px auto;
+}
+.section_01 .content div{
+    margin-top: 50px;
+    width: 35%;
+    float: left;
+    position: relative;
+}
+.section_01 .content div h1{
+    font-size: 4.25em;
+    font-family: '한컴 소망 M';
+    color: #001986;
+    /*position: absolute; left: -20%; top: -350%;*/
+}
+.section_01 .content div span{
+    white-space: pre-line;
+    font-size: 1.313em;
+    color: #444;
+    /*position: absolute; left: 0; top: 700%;*/
+}
+.section_01 .content div a{
+    margin-top: 90px;
+    width: 170px; height: 34px;
+    border: 1px solid #2b3d94;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+.section_01 .content div a p:first-child{
+    font-size: 1.25em;
+    color: #2b3d94;
+    position: absolute; 
+    left: calc(50% - 52px); top: 0px;
+    transition: .3s;
+}
+.section_01 .content div a p:last-child{
+    font-size: 1.25em;
+    position: absolute;
+    color: #2b3d94;
+    left: calc(50% - 52px); top: 30px;
+    transition: .3s;
+    color: #fff;
+}
+.section_01 .content div a:hover{background: #2b3d94;}
+.section_01 .content div a:hover P:first-child{top: 30px;}
+.section_01 .content div a:hover P:last-child{top: 0px;}
+
+.section_01 figure{
+    width: 45%; height: 589px;
+    margin-right: 185px;
+    position: relative;    
+}
+.section_01 figure p{
+    width: 100%; height: 100%;
+    overflow: hidden;
+}
+.section_01 figure p img{
+    width: 100%;
+}
+.section_01 figure:before{
+    content: '';
+    width: 100%; height: 100%;
+    border: 2px solid #2b3d94;
+    position: absolute; left: 160px; top: 34px;
+}
+
+
+/* SECTION02 */
+
+
+.section_02{
+    width: 100%;
+    position: relative;
+}
+.section_02 span{
+    width: 100%; height: 191px;
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #00479d;
+    position: relative;
+}
+.section_02 span:after{
+    content: '';
+    width: 15%; height: 1px;
+    background: #ddd;
+    position: absolute; left: 26%; top: 50%;
+}
+.section_02 span:before{
+    content: '';
+    width: 15%; height: 1px;
+    background: #ddd;
+    position: absolute; left: 59%; top: 50%;
+}
+
+/* 슬라이드 */
+.section_02 article{
+    max-width: 100%; 
+    width: calc(100% * 4); height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+.section_02 article .slideBBQ{
+    display: flex;
+    width: calc(100% / 4);
+    transition: 0.6s;
+}
+.section_02 article .slideBBQ div{
+}
+.section_02 article .slideBBQ div img{
+    position: absolute; left: 0; top: -20%;
+}
+.section_02 .button{
+    width: 15%;
+    max-width: 200px;
+    min-width: 114px;
+    cursor: pointer;
+    position: absolute;
+    left: calc(50% - 57px); bottom: 5%;
+}
+.section_02 .button a{
+    height: 54px;
+    opacity: .7; 
+    transition: .3s;
+    background-color: rgba(255,255,255,0);
+    border-radius: 30px;
+}
+.section_02 .button a:hover{
+    opacity: 1;
+    background-color: rgba(255,255,255,0.5);
+}
+.section_02 .button a:first-child{
+    float: left;
+    transform: translateX(-100%);
+}
+.section_02 .button a:last-child{
+    float: right;
+    transform: translateX(+100%);
+}
+
+
+
+/* SECTION03 */
+
+
+.section_03{
+    width: 100%;
+    background: #fff;
+}
+.section_03 .wrap{
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.section_03 .wrap dl{
+    width: 30%;
+    padding: 0 30px;
+    background: #ddd;
+}
+.section_03 .wrap dl dt{
+    padding: 47px 0;
+    text-align: center;
+    color: #00479d;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.section_03 .wrap dl dd{
+}
+.section_03 .wrap dl dd a{
+    width: 100%;
+    color: #222;
+}
+.section_03 .wrap dl dd a p{
+    color: #222;
+    display: inline-block;
+}
+.section_03 .wrap dl > a{}
+
